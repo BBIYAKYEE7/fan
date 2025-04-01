@@ -1,0 +1,46 @@
+.app {
+  height: 100vh;
+  overflow: hidden;
+  background-color: #f5f5f5;
+}
+
+.text-container {
+  height: 100vh;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.text-item {
+  position: absolute;
+  font-size: 3rem;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease;
+  text-align: center;
+  width: 100%;
+}
+
+.text-item.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.text-item.above {
+  opacity: 0;
+  transform: translateY(-100px);
+}
+
+.text-item.below {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow: hidden;
+}
